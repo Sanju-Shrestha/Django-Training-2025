@@ -6,3 +6,9 @@ class CouponSerializer(serializers.Serializer):
     code = serializers.CharField(max_length=10)
     discount = serializers.IntegerField()
     active = serializers.BooleanField()
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
